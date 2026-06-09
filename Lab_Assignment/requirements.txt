@@ -1,0 +1,9 @@
+# Lab Assignment — Supervisor-Workers RAG
+# Depends on the Day09 virtual environment (.venv at repo root)
+# Install with: pip install -r requirements.txt
+
+streamlit>=1.35.0
+langgraph>=0.2.0
+langchain-core>=0.3.0
+langchain-google-vertexai>=2.0.0
+python-dotenv>=1.0.0
