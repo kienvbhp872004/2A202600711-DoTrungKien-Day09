@@ -84,5 +84,10 @@ async def health() -> dict:
 
 
 if __name__ == "__main__":
-    logger.info("Starting Registry on port 10000")
-    uvicorn.run(app, host="0.0.0.0", port=10000, log_level="info")
+    import os
+    from dotenv import load_dotenv
+    load_dotenv()
+    registry_url = os.getenv("REGISTRY_URL", "http://localhost:10010")
+    port = int(registry_url.split(":")[-1])
+    logger.info("Starting Registry on port %d", port)
+    uvicorn.run(app, host="0.0.0.0", port=port, log_level="info")

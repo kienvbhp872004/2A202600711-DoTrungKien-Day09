@@ -100,8 +100,15 @@ def search_compliance_law(query: str) -> str:
 
 from typing import Annotated, TypedDict
 
-from langgraph.constants import Send
+from langgraph.types import Send
 from langgraph.graph import END, StateGraph
+
+
+def _extract_text(content) -> str:
+    """Extract plain text from LLM content (handles Gemini list format)."""
+    if isinstance(content, list):
+        return " ".join(p.get("text", "") if isinstance(p, dict) else str(p) for p in content)
+    return str(content)
 
 
 def _last_wins(a: str, b: str) -> str:
@@ -138,8 +145,9 @@ async def analyze_law(state: LegalState) -> dict:
         HumanMessage(content=state["question"]),
     ]
     result = await llm.ainvoke(messages)
-    print(f"  [Node: analyze_law] Done ({len(result.content)} chars)")
-    return {"law_analysis": result.content}
+    text = _extract_text(result.content)
+    print(f"  [Node: analyze_law] Done ({len(text)} chars)")
+    return {"law_analysis": text}
 
 
 async def check_routing(state: LegalState) -> dict:
@@ -160,7 +168,7 @@ async def check_routing(state: LegalState) -> dict:
         HumanMessage(content=state["question"]),
     ]
     result = await llm.ainvoke(messages)
-    raw = result.content.strip()
+    raw = _extract_text(result.content).strip()
     if raw.startswith("```"):
         raw = raw.split("```")[1]
         if raw.startswith("json"):
@@ -208,7 +216,7 @@ async def call_tax_specialist(state: LegalState) -> dict:
     agent = create_react_agent(model=llm, tools=[search_tax_law], prompt=tax_prompt)
     result = await agent.ainvoke({"messages": [{"role": "user", "content": state["question"]}]})
 
-    final_msg = result["messages"][-1].content
+    final_msg = _extract_text(result["messages"][-1].content)
     print(f"  [Node: call_tax_specialist] Done ({len(final_msg)} chars)")
     return {"tax_result": final_msg}
 
@@ -230,7 +238,7 @@ async def call_compliance_specialist(state: LegalState) -> dict:
     agent = create_react_agent(model=llm, tools=[search_compliance_law], prompt=compliance_prompt)
     result = await agent.ainvoke({"messages": [{"role": "user", "content": state["question"]}]})
 
-    final_msg = result["messages"][-1].content
+    final_msg = _extract_text(result["messages"][-1].content)
     print(f"  [Node: call_compliance_specialist] Done ({len(final_msg)} chars)")
     return {"compliance_result": final_msg}
 
@@ -262,8 +270,9 @@ async def aggregate(state: LegalState) -> dict:
         HumanMessage(content=combined),
     ]
     result = await llm.ainvoke(messages)
-    print(f"  [Node: aggregate] Done ({len(result.content)} chars)")
-    return {"final_answer": result.content}
+    text = _extract_text(result.content)
+    print(f"  [Node: aggregate] Done ({len(text)} chars)")
+    return {"final_answer": text}
 
 
 # ---------------------------------------------------------------------------

@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "vinuni-project",
+  "private_key_id": "34781e75d0011fd9da0bb6820644492cf175e13d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDr8YfaUuQ6fUHC\nsqfPnCveJsJwoR8KvQQiE4TIpvOSJjt8JvnluaF+HVCdE5G7nz6mdkUkPbzUeJBh\n0p98cr7aqiQLIIYZbat+nyKgzRdizfgTeiaqR/LhLeavGOK6EZwvfWFtn9hUBjsb\n88MYPjGBqAJC5N6C5paVrVE3uNffm25OSF5hZ0glVnJjHASBApQmBtZtMCzcR9+b\n5p6XMTtvAe3Iv7M4Z0QFGvAQ4UMQ8Pi1itLGvxCdDV7uFmDGZ5k+RCj2tXWSQTuC\nYVxOWGJw37qdizV01h0dVynO1Fl7oDVxQZ03RP8aUn/4hKYfJ9Pb4f6f4rdTB68m\nZqWCGaUVAgMBAAECggEAEHBweQGABeQ+zfhBMXmt48lbEFpljYu8azxlas6ZF3SC\n/gRAMqWjryQPPxaDN6mhhZsld6A2lS4+TxaMBrF/A0DKCJ1wQnrN8WFYmhAYIkn8\nEC1ZXtFrBo36bfZDq9e4xGVNwcPaoIYbnbe2/uwsal6Ao9UK/N9gnBaqm0GNhvaM\n7qda3JVD85731Su0mfkkEu/kMfc4vScTL6/SQ1HJZqMSi0XTwL3l/fZLC830Pif6\nDqSG03ggmUanFwegUB/b+IpEeHithAp89Nbqn4VWa39FO2tHkkqoAWtT7Jvs0lJT\nIj9zNU/nMhm9UGTnICKoUWcuGVlI8HfNIYxC+Xw9CQKBgQD86iSnQuA+mSMQErsz\nD+iOgHsv9igUcgpdAahBEO1Th/++FuPaQA4SmPvotMnqcg7kMdTSjel/r5D5uxyO\nPHbuNtfYwVQ8qvt0hd/jLszrAPT1b8t8AubO/U74+pHO2g3daebA1G+mRgqpoKU0\nXUIrINif/LJhi3wuCU1AWNG7vQKBgQDu0mLl5Mn5pWCzMRtMUrAIBmWsf/NMYQAP\nQE2lPF7qhxJEMdS53XGGiNoOYE9Z2Qz8Gy0C7WOu7VTn9P/i1tl+lx1RuQz1pJlM\nTQ/nkmShwqf4wrHrVmxBC0iolZbhAtyWpckj6I15HyEIN+BeSYbi6DlRYHc5qdiH\nshDi4kO4OQKBgQCkL5hl4PtUh/OELrTKPEybnfrasvFn/HSP1lCVFNkMviAfFhsL\nB0RbfGcktaDTCwJxz4u6uJfZ5W63QGoUSFpo4L+VHkSCMfmVtocWo74x3WgooU+3\nDOcrfrQy2++mGlaf420Cx6ZHifbIEdrNuLEI8ITQr6pZusR92loFKOPW/QKBgEST\nAHbGhQA77lJFrXLy4zzKqXMoojGyQJQggKsLdK2e7y3JqS1dWnWo4gPyv5Yq7sGN\nBBWtGExoNVMNVFRMINNqjK6klgYKp0Hzdreln2ObQyP4s6HBhQAAP3K40UP20GQp\nYmH/KnA28gMsGC66qhKJX7vwGQvjqxr7lEGxeoRxAoGAT7sWyGdeP3FQAITQa7Qt\n+dc7IER1LtFW5y/e4a68IpF8f5u3f0x36ImAYsxUPLXXZ/Yba2OkjaWndXGs7TTQ\nIiF5/znfBSor18dVDTXsdoqMqEy1NfrmCFhK7/IdvShTznsPxADCjHBwISqj+AGx\nLwNM0+delrE/8t3cuxGZQlQ=\n-----END PRIVATE KEY-----\n",
+  "client_email": "vertex-express@vinuni-project.iam.gserviceaccount.com",
+  "client_id": "110919367314257485703",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/vertex-express%40vinuni-project.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
